@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import articleContent from '../../data/articles.js'
 import '../../styles/containers/posts.css'
 import '../../styles/components/content.css'

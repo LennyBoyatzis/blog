@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import logo from '../../logo.svg';
 import '../../styles/components/header-bar.css';
 
@@ -20,6 +20,3 @@ class HeaderBar extends Component {
 }
 
 export default HeaderBar;
-
-
-        // <p className="headerbar-text">Python · Machine Learning · AI</p>
