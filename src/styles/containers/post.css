@@ -37,6 +37,7 @@
   width: 100%;
   height: 100%;
   background-color: #282a36;
+  font-size: calc(15px + (18 - 15) * ((100vw - 400px) / (1400 - 400)));
 }
 
 pre {
@@ -49,8 +50,6 @@ pre {
   pre {
     max-width: 660px;
     margin: 0 auto;
-    padding-bottom: 30px;
-    padding-left: 20px;
   }
 }
 
