@@ -1,0 +1,28 @@
+.headerbar-container {
+  display: flex;
+  flex: 1;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 660px;
+}
+
+.headerbar-menu li {
+  list-style: none;
+  display: inline;
+  color: #f8f8f2;
+}
+
+ul {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.headerbar-text {
+  color: #f8f8f2;
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  flex: 1;
+}
+
