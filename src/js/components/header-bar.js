@@ -11,7 +11,7 @@ class HeaderBar extends Component {
         <Link to="/">
           <img src={logo} width="55" alt="Site Logo"/>
         </Link>
-        <p className="headerbar-text">Python · Machine Learning · AI</p>
+        <p className="headerbar-text">Python · ML · AI</p>
         <ul className="headerbar-menu">
           <li>
             <a onClick={() => toggleModal()} className="subscribe-button">Subscribe</a>

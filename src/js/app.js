@@ -12,17 +12,64 @@ class App extends Component {
 
     this.state = {
       modalIsOpen: false,
+      canSubmit: false,
+      userDetails: {},
     }
     this.renderForm = this.renderForm.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
+    this.enableButton = this.enableButton.bind(this);
+    this.disableButton = this.disableButton.bind(this);
+    this.submit = this.submit.bind(this);
+  }
+
+  enableButton() {
+    this.setState({ canSubmit: true });
+  }
+
+  disableButton() {
+    this.setState({ canSubmit: false });
+  }
+
+  submit() {
+    console.log("here is data", this.state.userDetails)
+  }
+
+  handleInputChange(field) {
+    return event => 
+      this.setState({
+        userDetails: {
+          ...this.state.userDetails,
+          [field]: event.target.value,
+        }
+      })
   }
 
   renderForm() {
     return (
-      <Formsy.Form className="form">
-        <input className="input" placeholder="First name" />
-        <input className="input" placeholder="Last name" />
-        <input className="input" placeholder="Email"/>
+      <Formsy.Form
+        onSubmit={this.submit}
+        onValid={this.enableButton}
+        onInvalid={this.disableButton}
+        className="form"
+      >
+        <input 
+          onChange={this.handleInputChange('firstName')}
+          className="input" 
+          placeholder="First name"
+        />
+        <input 
+          onChange={this.handleInputChange('lastName')}
+          className="input" 
+          placeholder="Last name" 
+        />
+        <input 
+          onChange={this.handleInputChange('email')}
+          className="input" 
+          placeholder="Email"
+          validations="isEmail"
+          validationError="A valid email is required"
+          required
+        />
         <button className="submit" type="submit">Get notified</button>
       </Formsy.Form>
     )
@@ -35,6 +82,7 @@ class App extends Component {
   }
 
   render() {
+    console.log("this.state.userDetails", this.state.userDetails)
     return (
       <div className="container">
         <div className="nav-container">
