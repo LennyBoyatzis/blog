@@ -9,6 +9,7 @@ export default class Post extends Component {
     return (
       <div className="post-container">
         <h1 className="post-content post-headline">List Comprehension vs Generator Expressions</h1>
+        <p className="post-content post-date">March 20th 2017</p>
         <p className="post-content">
           Both list comprehensions and generator expressions look very similar in their syntax. 
           The subtle difference being [...] vs (...).

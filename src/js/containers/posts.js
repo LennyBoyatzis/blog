@@ -10,8 +10,8 @@ export default class Posts extends Component {
       <div className="content-container">
         <div className="posts-container">
           {
-            articleContent.reverse().map(article =>
-              <Link className="content-link" key={article.id} to={`/post/${article.id}`}>
+            articleContent.map(article =>
+              <Link className="content-link" key={article.id} to={`/post/post-${article.id}`}>
                 <div className="content-article">
                   <h2>{article.title}</h2>
                   <hr className="content-divider"/>
