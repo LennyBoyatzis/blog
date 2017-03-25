@@ -82,7 +82,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("this.state.userDetails", this.state.userDetails)
     return (
       <div className="container">
         <div className="nav-container">

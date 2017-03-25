@@ -36,7 +36,12 @@ ul {
 .subscribe-button {
   background-color: #ff79c6;
   padding: 10px;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-image: none;
+  border: none;
+  color: #fff;
+  outline: 0;
 }

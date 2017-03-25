@@ -103,6 +103,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   font-size: 14px;
+  outline: 0;
 }
 
 .close-modal {

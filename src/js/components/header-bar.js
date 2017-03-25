@@ -14,7 +14,7 @@ class HeaderBar extends Component {
         <p className="headerbar-text">Python · ML · AI</p>
         <ul className="headerbar-menu">
           <li>
-            <a onClick={() => toggleModal()} className="subscribe-button">Subscribe</a>
+            <button onClick={() => toggleModal()} className="subscribe-button">Subscribe</button>
           </li>
         </ul>
       </div>
