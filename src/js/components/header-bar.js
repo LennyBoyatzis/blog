@@ -5,6 +5,7 @@ import '../../styles/components/header-bar.css';
 
 class HeaderBar extends Component {
   render() {
+    const { toggleModal } = this.props;
     return (
       <div className="headerbar-container">
         <Link to="/">
@@ -12,7 +13,9 @@ class HeaderBar extends Component {
         </Link>
         <p className="headerbar-text">Python · Machine Learning · AI</p>
         <ul className="headerbar-menu">
-          <li>Contact</li>
+          <li>
+            <a onClick={() => toggleModal()} className="subscribe-button">Subscribe</a>
+          </li>
         </ul>
       </div>
     )
