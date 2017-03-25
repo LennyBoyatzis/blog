@@ -8,7 +8,7 @@ export default [
   {
     id: '2',
     title: 'What does a @memoize decorator do?',
-    content: 'TLDR: Runs the code below it if a module/file is run as a program',
+    content: 'TLDR: Caches the return values of a function and their corresponding arguments.',
     dateCreated: 'Mar 19, 2017',
   },
   {

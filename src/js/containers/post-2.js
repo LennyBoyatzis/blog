@@ -9,7 +9,8 @@ export default class Post extends Component {
       <div className="post-container">
         <h1 className="post-content post-headline">What does @memoize do?</h1>
         <p className="post-content">
-          The @memoize decorator creates a cache that stores the return values of a function and their corresponding arguments. 
+          The @memoize decorator creates a cache that stores the return values of a
+          function and their corresponding arguments. 
         </p>
         <p className="post-content">
           This means that if a function is invoked with arguments that it has already seen before, it can simply look up the return value in cache rather than having to execute the function again.
