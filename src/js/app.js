@@ -31,7 +31,7 @@ class App extends Component {
   }
 
   submit() {
-    console.log("here is data", this.state.userDetails)
+   console.log("Hello worldo") 
   }
 
   handleInputChange(field) {
