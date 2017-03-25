@@ -27,6 +27,12 @@ h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
 }
 
+code {
+  font-family: 'Source Code Pro', monospace;
+  font-size: calc(13px + (16 - 12) * ((100vw - 400px) / (1400 - 400)));
+  line-height: calc(20px + (25 - 12) * ((100vw - 400px) / (1400 - 400)));
+}
+
 h1, h2 {
   font-size: calc(25px + (50 - 25) * ((100vw - 400px) / (1400 - 400)));
   line-height: calc(25px + (55 - 25) * ((100vw - 400px) / (1400 - 400)));
