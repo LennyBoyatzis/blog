@@ -12,6 +12,7 @@ class App extends Component {
 
     this.state = {
       modalIsOpen: false,
+      isLoading: false,
       canSubmit: false,
       userDetails: {},
     }
@@ -31,7 +32,27 @@ class App extends Component {
   }
 
   submit() {
-   console.log("Hello worldo") 
+    this.setState({ isLoading: true });
+    const { firstName, lastName, email } = this.state.userDetails;
+    fetch('https://qs82ztnbpg.execute-api.us-east-1.amazonaws.com/dev/users/create', {
+      method: 'POST',
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      }
+    })
+      .then(response => {
+        this.setState({
+          loading: false,
+          modalIsOpen: false,
+        })
+      })
+    .catch(error => console.log("error", error))
   }
 
   handleInputChange(field) {
@@ -45,6 +66,7 @@ class App extends Component {
   }
 
   renderForm() {
+    const { isLoading } = this.state;
     return (
       <Formsy.Form
         onSubmit={this.submit}
@@ -56,21 +78,22 @@ class App extends Component {
           onChange={this.handleInputChange('firstName')}
           className="input" 
           placeholder="First name"
+          tabIndex={1}
         />
         <input 
           onChange={this.handleInputChange('lastName')}
           className="input" 
           placeholder="Last name" 
+          tabIndex={2}
         />
         <input 
           onChange={this.handleInputChange('email')}
           className="input" 
           placeholder="Email"
-          validations="isEmail"
-          validationError="A valid email is required"
           required
+          tabIndex={3}
         />
-        <button className="submit" type="submit">Get notified</button>
+        <button className="submit" type="submit">{ isLoading ? 'Submitting...' : 'Get notified'}</button>
       </Formsy.Form>
     )
   }
@@ -92,6 +115,7 @@ class App extends Component {
         {this.props.children}
         <ReactModal 
           isOpen={this.state.modalIsOpen}
+          contentLabel={''}
           style={{
             overlay: {
              backgroundColor: 'rgba(40,42,54,0.95)',
