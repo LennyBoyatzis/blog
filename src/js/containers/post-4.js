@@ -17,7 +17,7 @@ export default class Post extends Component {
         <p className="post-content">
           Sounds similar to list? Well, it is. A stacks interface is similar to a list's, however, stacks only allow
           for the push/append and pop operations (i.e. only adding and removing from the end of a list). In terms of efficient, unlike a list,
-          a stack does not offer constant-time access to the ith item, however, it does allow constant time adds
+          a stack does not offer constant-time (O(1) time) access to the ith item, however, it does allow constant time adds
           and removes (as no shifting of elements is required).
         </p>
         <p className="post-content">
