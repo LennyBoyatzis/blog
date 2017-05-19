@@ -15,13 +15,13 @@ export default class Post extends Component {
           This means that last item inserted into a stack will be the first item to be removed.
         </p>
         <p className="post-content">
-          Sounds similar to list? Well, it is. A stacks interface is similar to a list's, however, stacks only allow
-          for the push/append and pop operations (i.e. only adding and removing from the end of a list). In terms of efficient, unlike a list,
+          A stacks interface is similar to a list's, however, stacks only allow
+          for the append and pop operations (i.e. only adding and removing from the end of a list). In terms of efficiency, unlike a list,
           a stack does not offer constant-time (O(1) time) access to the ith item, however, it does allow constant time adds
           and removes (as no shifting of elements is required).
         </p>
         <p className="post-content">
-          Although there are many ways to implement a Stack, we will be creating a new class and implementing 
+          Although there are many ways to implement a Stack, the example below creates new class and implements 
           the stack operations as methods on this class. To further simplify things, we will use a list as our stacks
           storage mechanism. Now without further or do,
         </p>
@@ -31,7 +31,7 @@ export default class Post extends Component {
           </Highlight>
         </div>
         <p className="post-content">
-          Looking at the above implementation, stacks are pretty simple data structures which are 
+          Looking at the above implementation, stacks are relatively simple data structures which are 
           particularly useful in recursive algorithms where temporary data can be stored as you recurse
           but then removed when you backtrack. A common example of this is a call stack.
         </p>

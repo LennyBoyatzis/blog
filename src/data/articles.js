@@ -1,5 +1,17 @@
 export default [
   {
+    id: '6',
+    title: 'Algorithms: Implementing Binary Search',
+    content: 'TLDR: Binary Search uses a divide and conquer approach to find a value within a give search space.',
+    dateCreated: 'May 20, 2017',
+  },
+  {
+    id: '5',
+    title: 'Data Structures: Implementing a Queue',
+    content: 'TLDR: Queues are a data structure which implement a first in first out (FIFO) policy. This means that the item that was first to join the queue is going to be the first item to be removed from the queue.',
+    dateCreated: 'May 10, 2017',
+  },
+  {
     id: '4',
     title: 'Data Structures: Implementing a Stack',
     content: 'TLDR: Stacks are a common elementary data structure which implement a Last In First Out (LIFO) policy. This means that last item inserted into a stack will be the first item to be removed. Each item in a stack is referred to as a stack frame.',
